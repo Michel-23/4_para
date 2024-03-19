@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/PC/4_para/build",
+  "command": "C:\\MinGW\\bin\\g++.exe    -std=c++17 -g -o CMakeFiles\\main.dir\\main.cpp.obj -c C:\\Users\\PC\\4_para\\main.cpp",
+  "file": "C:/Users/PC/4_para/main.cpp",
+  "output": "CMakeFiles/main.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/PC/4_para/build",
+  "command": "C:\\MinGW\\bin\\g++.exe    -std=c++17 -g -o CMakeFiles\\main.dir\\realisation.cpp.obj -c C:\\Users\\PC\\4_para\\realisation.cpp",
+  "file": "C:/Users/PC/4_para/realisation.cpp",
+  "output": "CMakeFiles/main.dir/realisation.cpp.obj"
+},
+{
+  "directory": "C:/Users/PC/4_para/build",
+  "command": "C:\\MinGW\\bin\\g++.exe    -std=c++17 -g -o CMakeFiles\\main.dir\\realComplex.cpp.obj -c C:\\Users\\PC\\4_para\\realComplex.cpp",
+  "file": "C:/Users/PC/4_para/realComplex.cpp",
+  "output": "CMakeFiles/main.dir/realComplex.cpp.obj"
+}
+]
