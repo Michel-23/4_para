@@ -1,13 +1,29 @@
 #include <iostream>
 #include "Class.h"
 #include "Complex.h"
-/*
-+ 1. Сделать дробь
-+ 2. перегрузка операций
-+ 3. операции с комплексными числами
-4. решение квадратного ур-я для D>=0
-5. решение квадратного ур-я для D<0
-*/
+
+void Descriminant (Fraction D, Fraction Coef_x, Fraction Coef_x2){
+    if (static_cast<double> (D) > 0){
+        Fraction x1 = (- Coef_x + pow(D, 0.5)) / 2 * Coef_x2;
+        Fraction x2 = (- Coef_x - pow(D, 0.5)) / 2 * Coef_x2;
+        std:: cout << x1 << std:: endl;
+        std:: cout << x2 << std:: endl;
+    }
+    if (static_cast<double> (D) == 0){
+        Fraction x = (- Coef_x) / 2 * Coef_x2;
+        std:: cout << x << std:: endl;
+    }
+    if (static_cast<double> (D) < 0){
+        Fraction x1_re = (-Coef_x / (2 * Coef_x2));
+        Fraction x1_im = pow (fabs(D), 0.5) / (2 * Coef_x2);
+        Fraction x2_re = (-Coef_x / (2 * Coef_x2));
+        Fraction x2_im = -(pow (fabs(D), 0.5) / (2 * Coef_x2));
+        Complex x1 = Complex (x1_re, x1_im);
+        Complex x2 = Complex (x2_re, x2_im);
+        std:: cout << x1 << std:: endl;
+        std:: cout << x2 << std:: endl;
+    }
+}
 
 int main(){
     /* 2 para
@@ -82,27 +98,8 @@ int main(){
     Fraction Coef_x2 = Fraction(coef_x2);
     Fraction Coef_x = Fraction(coef_x);
     Fraction Coef = Fraction(coef);
-    Fraction D = pow(Coef_x, 2) - (2 * Coef_x2 * Coef);
+    Fraction D = pow(Coef_x, 2) - (4 * Coef_x2 * Coef);
 
-    if (static_cast<double> (D) > 0){
-        Fraction x1 = (- Coef_x + pow(D, 0.5)) / 2 * Coef_x2;
-        Fraction x2 = (- Coef_x - pow(D, 0.5)) / 2 * Coef_x2;
-        std:: cout << x1 << std:: endl;
-        std:: cout << x2 << std:: endl;
-    }
-    if (static_cast<double> (D) == 0){
-        Fraction x = (- Coef_x) / 2 * Coef_x2;
-        std:: cout << x << std:: endl;
-    }
-    if (static_cast<double> (D) < 0){
-        Fraction x1_re = (-Coef_x / (2 * Coef_x2));
-        Fraction x1_im = pow (fabs(D), 0.5) / (2 * Coef_x2);
-        Fraction x2_re = (-Coef_x / (2 * Coef_x2));
-        Fraction x2_im = -(pow (fabs(D), 0.5) / (2 * Coef_x2));
-        Complex x1 = Complex (x1_re, x1_im);
-        Complex x2 = Complex (x2_re, x2_im);
-        std:: cout << x1 << std:: endl;
-        std:: cout << x2 << std:: endl;
-    }
+    Descriminant (D, Coef_x, Coef_x2);
     return 0;
 }

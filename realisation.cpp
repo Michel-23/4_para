@@ -75,8 +75,8 @@ Fraction:: Fraction(double n){
     _denum = denom;
 }
 
-Fraction::Fraction(const Fraction& fract){
-    _denum = fract._denum;
-    _num = fract._num;
-    std::cout << "Copy constructor -> " << this /*указатель на себя (fract)*/<< std::endl;
-}
+// Fraction::Fraction(const Fraction& fract){
+//     _denum = fract._denum;
+//     _num = fract._num;
+//     std::cout << "Copy constructor -> " << this /*указатель на себя (fract)*/<< std::endl;
+// }

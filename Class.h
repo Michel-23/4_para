@@ -19,7 +19,7 @@ public:
     Fraction (int32_t numm, int32_t denumm);
     Fraction (double n);
 
-    Fraction (const Fraction& fract);
+    //Fraction (const Fraction& fract);
 
     Fraction operator+ (const Fraction& fraction) const{
         int32_t new_num = _num * fraction._denum + fraction._num * _denum;
