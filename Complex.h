@@ -1,5 +1,5 @@
 #pragma once
-#include "class.h"
+#include "Class.h"
 
 class Complex{
 private:
@@ -12,10 +12,10 @@ public:
 
     friend std::ostream& operator<< (std::ostream& os, const Complex& tmp) {
     os << tmp._re;
-    if (static_cast<double>(tmp._im) > 0)
-    os << " + " << tmp._im << "i" << std::endl;
+    if (tmp._im > 0)
+        os << " + " << tmp._im << "i" << std::endl;
     else
-    os << tmp._im << "i" << std::endl;
+        os << tmp._im << "i" << std::endl;
     return os;
     }
 

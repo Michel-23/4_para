@@ -97,4 +97,5 @@ CMakeFiles/main.dir/main.cpp.obj: C:\Users\PC\4_para\main.cpp \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc \
  C:\Users\PC\4_para\Class.h \
- c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cmath c:\mingw\include\math.h
+ c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cmath c:\mingw\include\math.h \
+ C:\Users\PC\4_para\Complex.h
