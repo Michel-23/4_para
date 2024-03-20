@@ -25,4 +25,18 @@ public:
         Complex res = Complex(new_re, new_im);
         return res;
     }
+
+    Complex operator- (const Complex& tmp) const{
+        Fraction new_re = _re - tmp._re;
+        Fraction new_im = _im - tmp._im;
+        Complex res = Complex(new_re, new_im);
+        return res;
+    }
+
+    Complex operator* (const Complex& tmp) const{
+        Fraction new_re = (_re * tmp._re) - (_im * tmp._im);
+        Fraction new_im = (_re * tmp._im) + (_im * tmp._im);
+        Complex res = Complex(new_re, new_im);
+        return res;
+    }
 };
