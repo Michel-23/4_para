@@ -12,15 +12,17 @@ public:
 
     friend std::ostream& operator<< (std::ostream& os, const Complex& tmp) {
     os << tmp._re;
-    if (tmp._im > 0)
-        os << " + " << tmp._im << "i" << std::endl;
+    if (static_cast<double> (tmp._im) > 0)
+        os << " + " << tmp._im << " i" << std:: endl;
     else
-        os << tmp._im << "i" << std::endl;
+        os << tmp._im << " i" << std:: endl;
     return os;
     }
 
     Complex operator+ (const Complex& tmp) const{
         Fraction new_re = _re + tmp._re;
         Fraction new_im = _im + tmp._im;
+        Complex res = Complex(new_re, new_im);
+        return res;
     }
 };

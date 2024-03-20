@@ -126,8 +126,21 @@ public:
         return *this;
     }*/
 
+    Fraction operator+ (double right) const{
+        Fraction res = *this + Fraction(right);
+        return res;
+    }
+
+    operator double() const{
+        return static_cast<double> (_num) / _denum;
+    }
+
+    inline void PrintDouble(){
+        std::cout << static_cast<double> (_num) / _denum << std::endl;
+    }
+
     friend std::ostream& operator<< (std::ostream& os, const Fraction& tmp){
-        os << tmp._num << "/" << tmp._denum << std:: endl;
+        os << tmp._num << "/" << tmp._denum;
         return os;
     }
 };
