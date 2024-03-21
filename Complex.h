@@ -13,9 +13,9 @@ public:
     friend std::ostream& operator<< (std::ostream& os, const Complex& tmp) {
     os << tmp._re;
     if (static_cast<double> (tmp._im) > 0)
-        os << " + " << tmp._im << " i" << std:: endl;
+        os << " + " << tmp._im << " i";
     else
-        os << tmp._im << " i" << std:: endl;
+        os << tmp._im << " i";
     return os;
     }
 
